@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Upload Data - Resnick Alumni Tracking System</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Nunito.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/resnick.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand bg-white shadow topbar static-top">
+        <div class="container-fluid">
+            <div class="d-flex topbar"><img style="border-style: none;" src="assets/img/icons/Temple_T_logo.svg"><span class="d-inline-flex align-items-center h1 align-middle" style="height: 100%;margin-left: 16px;"><span style="color: rgb(248, 249, 252);">Resnick Center Alumni Tracking System</span><br><br></span></div><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+            <ul class="navbar-nav flex-nowrap ms-auto">
+                <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                        <form class="me-auto navbar-search w-100">
+                            <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <div class="d-none d-sm-block topbar-divider"></div>
+                <li class="nav-item dropdown no-arrow">
+                    <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="fs-5 text-light d-none d-lg-inline me-2 small" id="user-name">Alyssa Drachslin</span><img class="border rounded-circle img-profile" id="user-icon" src="assets/img/avatars/avatar5.jpeg"></a>
+                        <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-th-list"></i><span>Alumni List</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="createalumnus.html"><i class="fas fa-user-plus"></i><span>Create Alumnus</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="uploaddata.html"><i class="fas fa-upload"></i><span>Upload Data</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="useraccess.html"><i class="fas fa-user-lock"></i><span>User Access</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="validationtables.html"><i class="fas fa-table"></i><span>Validation Tables</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div>
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" href="#graduate-tab">Upload Graduates</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#alumnidata-tab">Upload Alumni Data</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#conversion-tab">Initial Spreadsheet Conversion</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="graduate-tab">
+                            <div class="container" style="margin-top: 1rem;">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <h5 class="text-primary m-0 fw-bold">Upload Graduates</h5>
+                                    </div>
+                                    <div class="card-body" style="overflow-x: auto;">
+                                        <div>
+                                            <div class="text-center"><button class="btn btn-primary btn-lg" type="button" style="margin-bottom: 1rem;border-style: none;border-radius: 300px;">Download Template</button></div>
+                                            <div>
+                                                <form enctype="multipart/form-data" method="post" style="margin-right: 5rem;margin-left: 5rem;">
+                                                    <div id="graduateDragArea" class="text-center" style="background: var(--bs-primary);border-radius: 32px;border: 8px dashed #ffffff;margin-bottom: 1rem;" ondrop="graduateDropHandler(event);" ondragover="dragOverHandler(event);"><i class="fas fa-upload" style="font-size: 8rem;color: rgb(255,255,255);margin-top: 16px;"></i>
+                                                        <p style="color: #ffffff;margin-top: 1.5rem;font-size: 24px;">Drag and Drop or Click Here to Upload</p>
+                                                        <p id="graduateFileName" class="d-none" style="color: #ffffff;">Paragraph</p>
+                                                    </div><input class="form-control d-none" type="file" id="graduateFileUpload" name="graduateFile">
+                                                    <div class="text-center"><button class="btn btn-primary btn-lg" type="submit" style="border-style: none;border-radius: 300px;">Upload</button><textarea class="form-control" style="box-sizing: border-box;border: 2px solid #ccc;border-radius: 4px;background-color: #f8f8f8;min-height: 12rem;margin-top: 1rem;" disabled=""></textarea></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="alumnidata-tab">
+                            <div class="container" style="margin-top: 1rem;">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <h5 class="text-primary m-0 fw-bold">Upload Alumni Data</h5>
+                                    </div>
+                                    <div class="card-body" style="overflow-x: auto;">
+                                        <div>
+                                            <p id="alumniDataParagraph" class="text-center"><span style="color: rgb(0, 0, 0);">In order to upload an alumni profile you first need</span><br><span style="color: rgb(0, 0, 0);">to download the desired template and input your data into it&nbsp;</span></p>
+                                            <div class="text-center"><button class="btn btn-primary btn-lg" type="button" style="margin-bottom: 1rem;border-style: none;border-radius: 300px;">Download Template</button></div>
+                                            <div>
+                                                <form enctype="multipart/form-data" method="post" style="margin-right: 5rem;margin-left: 5rem;">
+                                                    <div id="alumniDragArea" class="text-center" style="background: var(--bs-primary);border-radius: 32px;border: 8px dashed #f8f8f8;margin-bottom: 1rem;" ondrop="alumniDropHandler(event);" ondragover="dragOverHandler(event);"><i class="fas fa-upload" style="font-size: 8rem;color: rgb(255,255,255);margin-top: 16px;"></i>
+                                                        <p style="color: #ffffff;margin-top: 1.5rem;font-size: 24px;">Drag and Drop or Click Here to Upload</p>
+                                                        <p id="alumniFileName" class="d-none" style="color: #ffffff;">Paragraph</p>
+                                                    </div><input class="form-control d-none" type="file" id="alumniFileUpload" name="alukmniFile">
+                                                    <div class="text-center"><button class="btn btn-primary btn-lg" type="submit" style="border-style: none;border-radius: 300px;">Upload</button><textarea class="form-control" style="width: 100%;box-sizing: border-box;border: 2px solid #ccc;border-radius: 4px;background-color: #f8f8f8;min-height: 12rem;margin-top: 1rem;" disabled=""></textarea></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="conversion-tab">
+                            <div class="container" style="margin-top: 1rem;">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <h5 class="text-primary m-0 fw-bold">Initial Spreadsheet Conversion</h5>
+                                    </div>
+                                    <div class="card-body" style="overflow-x: auto;">
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Resnick Alumni Tracking System 2022</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/alumnilist.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/uploaddata.js"></script>
+    <script src="assets/js/validationtables.js"></script>
+</body>
+
+</html>
