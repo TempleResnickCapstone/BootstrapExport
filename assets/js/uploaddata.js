@@ -26,11 +26,15 @@ function dropHandler(ev, mode) {
 }
 
 function graduateDropHandler(ev) {
-    dropHandler(ev, 'graduate')
+    dropHandler(ev, 'graduate');
 }
 
 function alumniDropHandler(ev) {
-    dropHandler(ev, 'alumni')
+    dropHandler(ev, 'alumni');
+}
+
+function conversionDropHandler(ev) {
+    dropHandler(ev, 'conversion');
 }
 
 function dragOverHandler(ev) {
@@ -58,4 +62,14 @@ $('#alumniFileUpload').on('change', function(e) {
     let fileName = e.target.files[0].name;
     $("#alumniFileName").text(`File Name: ${fileName}`);
     $("#alumniFileName").removeClass("d-none");
+})
+
+$('#conversionDragArea').on('click', function() {
+    $('#conversionFileUpload').trigger('click');
+});
+
+$('#conversionFileUpload').on('change', function(e) {
+    let fileName = e.target.files[0].name;
+    $("#conversionFileName").text(`File Name: ${fileName}`);
+    $("#conversionFileName").removeClass("d-none");
 })
