@@ -54,33 +54,119 @@
                         <div class="card-header py-3">
                             <h5 class="text-primary m-0 fw-bold">Alumni List</h5>
                         </div>
-                        <div class="card-body" style="overflow-x: auto;">
+                        <div class="card-body">
+                            <div class="row justify-content-between">
+                                <div class="col-auto">
+                                    <div><label class="form-label d-block">Table Columns</label><select>
+                                            <option value="12" selected="">Default</option>
+                                            <option value="">TUID</option>
+                                            <option value="13">First Name</option>
+                                            <option value="14">Last Name</option>
+                                            <option value="">Sport(s)</option>
+                                            <option value="">Grad Year</option>
+                                            <option value="">Grad Term</option>
+                                            <option value="">Industry</option>
+                                            <option value="">LinkedIn URL</option>
+                                            <option value="">LinkedIn Status</option>
+                                            <option value="">Res. City</option>
+                                            <option value="">Res. State</option>
+                                        </select></div>
+                                </div>
+                                <div class="col-auto col-xxl-1 mt-auto"><button class="btn btn-primary" type="button">Export</button></div>
+                            </div>
                             <div class="row">
-                                <div class="col">
-                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filterCollapse" href="#filterCollapse" role="button">Filters<i class="fas fa-filter" style="margin-left: 4px;"></i></a>
+                                <div class="col mt-auto">
+                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filterCollapse" href="#filterCollapse" role="button" style="margin-top: 1rem;margin-bottom: 0.5rem;">Filters<i class="fas fa-filter" style="margin-left: 4px;"></i></a>
                                         <div class="collapse" id="filterCollapse">
                                             <form class="filterBoxes">
                                                 <div class="row">
-                                                    <div class="col">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-group"><label class="form-label" for="TUIDFilter">TUID</label><input class="form-control" type="text" id="TUIDFilter" name="TUIDFilter"></div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <div class="form-group"><label class="form-label" for="FirstNameFilter">First Name</label><input class="form-control" type="text" id="FirstNameFilter" name="FirstNameFilter"></div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <div class="form-group"><label class="form-label" for="LastNameFilter">Last Name</label><input class="form-control" type="text" id="LastNameFilter" name="LastNameFilter"></div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="FirstNameFilter">First Name</label><input class="form-control" type="text" id="FirstNameFilter" name="FirstNameFilter"></div>
                                                     </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Last Name</label><input class="form-control" type="text" id="LastNameFilter" name="LastNameFilter"></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Sport(s)</label><select class="form-select">
+                                                                <option value="">Select...</option>
+                                                                <optgroup label="Volleyball">
+                                                                    <option value="12">Men's Volleyball</option>
+                                                                    <option value="13">Women's Volleyball</option>
+                                                                </optgroup>
+                                                                <optgroup label="Soccer">
+                                                                    <option value="">Men's Soccer</option>
+                                                                    <option value="">Women's Soccer</option>
+                                                                </optgroup>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Grad Year</label><input class="form-control" type="number" id="LastNameFilter-2" name="LastNameFilter"></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Grad Term</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <optgroup label="2023">
+                                                                    <option value="">Spring 2023</option>
+                                                                </optgroup>
+                                                                <optgroup label="2022">
+                                                                    <option value="12">Fall 2022</option>
+                                                                    <option value="13">Spring 2022</option>
+                                                                    <option value="14">Summer 2022</option>
+                                                                </optgroup>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Major</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <option value="13">Information Science &amp; Technology</option>
+                                                                <option value="14">Computer Science</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Industry</label><select class="form-select">
+                                                                <option value="13" selected="">Select...</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">LinkedIn Status</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <option value="12">Active</option>
+                                                                <option value="13">Inactive</option>
+                                                                <option value="14">No Account</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Residing State</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <option value="13">PA</option>
+                                                                <option value="14">NJ</option>
+                                                                <option value="">DE</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Education Institution</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <option value="13">Temple University</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Education School/College</label><select class="form-select">
+                                                                <option value="" selected="">Select...</option>
+                                                                <optgroup label="Temple University">
+                                                                    <option value="13">College of Science &amp; Technology</option>
+                                                                    <option value="14">School of Public Health</option>
+                                                                </optgroup>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Employer</label><input class="form-control" type="text" id="LastNameFilter-10" name="LastNameFilter"></div>
+                                                    </div>
+                                                    <div class="col-auto mt-auto"><button class="btn btn-primary" type="button">Clear</button></div>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto mx-auto"><button class="btn btn-primary" type="button">Clear</button></div>
-                                <div class="col-auto mx-auto"><button class="btn btn-primary" type="button">Export</button></div>
                             </div>
                             <div class="table-responsive table mt-2" id="alumniDataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
@@ -535,6 +621,7 @@
     <script src="assets/js/alumnilist.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/uploaddata.js"></script>
+    <script src="assets/js/useraccess.js"></script>
     <script src="assets/js/validationtables.js"></script>
 </body>
 
