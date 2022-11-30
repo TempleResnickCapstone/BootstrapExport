@@ -37,3 +37,11 @@ $("#NotesAddNew").on('click', function(){
 $("#NewNoteCancel").on('click', function(){
     $("#NewNote").addClass("d-none");
 });
+
+$("#EditSurveyCancel").on('click', function(){
+    $("#EditSurveyResponse").addClass("d-none");
+});
+
+$("#tempSurveyEditButton").on('click', function(){
+    $("#EditSurveyResponse").removeClass("d-none");
+});
