@@ -141,3 +141,12 @@
   font-size: calc(100% + 1vw + 1vh);
 }
 
+#profile-modal .form-label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#profile-modal .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+

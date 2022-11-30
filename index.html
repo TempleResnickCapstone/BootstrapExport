@@ -68,7 +68,7 @@
                                                         <div class="form-group"><label class="form-label" for="LastNameFilter">Last Name</label><input class="form-control" type="text" id="LastNameFilter" name="LastNameFilter"></div>
                                                     </div>
                                                     <div class="col-auto mt-auto">
-                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Sport(s)</label><select class="form-select">
+                                                        <div class="form-group"><label class="form-label" for="LastNameFilter">Sport</label><select class="form-select">
                                                                 <option value="">Select...</option>
                                                                 <option value="12">Men's Volleyball</option>
                                                                 <option value="13">Women's Volleyball</option>
@@ -171,7 +171,7 @@
                                             <th></th>
                                             <th style="margin-right: -9px;">First Name<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
                                             <th>Last Name<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
-                                            <th>Sport(s)<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
+                                            <th>Sport<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
                                             <th>Grad Year<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
                                             <th>Major<i class="fas fa-sort" style="margin-left: 8px;"></i></th>
                                             <th>Temple Email</th>
@@ -308,8 +308,8 @@
             <div class="modal fade" role="dialog" tabindex="-1" id="profile-modal">
                 <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Alumnus Profile</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-header" style="background: var(--bs-primary);">
+                            <h4 class="modal-title" style="color: white;">Alumnus Profile</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
@@ -403,6 +403,30 @@
                                     <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-1" aria-expanded="false" aria-controls="profile-accordion .item-1">Education</button></h2>
                                     <div class="accordion-collapse collapse item-1" role="tabpanel">
                                         <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Year</th>
+                                                            <th>Degree Type</th>
+                                                            <th>Major</th>
+                                                            <th>Institution</th>
+                                                            <th>College / School</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2023</td>
+                                                            <td>B.S.</td>
+                                                            <td>Information Science &amp; Technology</td>
+                                                            <td>Temple University</td>
+                                                            <td>College of Science &amp; Technology</td>
+                                                            <td class="text-center"><button class="btn btn-primary" type="button" style="margin-right: 4px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 4px;">Delete</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col">
@@ -444,30 +468,6 @@
                                                     <div class="col-auto m-auto text-center" style="padding: 0;"><button class="btn btn-primary" id="EducationAddNew" type="button">Add New</button></div>
                                                 </div>
                                             </div>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Year</th>
-                                                            <th>Degree Type</th>
-                                                            <th>Major</th>
-                                                            <th>Institution</th>
-                                                            <th>College / School</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>2023</td>
-                                                            <td>B.S.</td>
-                                                            <td>Information Science &amp; Technology</td>
-                                                            <td>Temple University</td>
-                                                            <td>College of Science &amp; Technology</td>
-                                                            <td class="text-center"><button class="btn btn-primary" type="button" style="margin-right: 4px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 4px;">Delete</button></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -475,6 +475,24 @@
                                     <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-2" aria-expanded="false" aria-controls="profile-accordion .item-2">Sport</button></h2>
                                     <div class="accordion-collapse collapse item-2" role="tabpanel">
                                         <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sport</th>
+                                                            <th>Status</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Men's Soccer</td>
+                                                            <td>Active</td>
+                                                            <td><button class="btn btn-primary" type="button">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 1rem;">Delete</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col">
@@ -504,24 +522,6 @@
                                                     <div class="col-auto m-auto text-center" style="padding: 0;"><button class="btn btn-primary" id="SportsAddNew" type="button">Add New</button></div>
                                                 </div>
                                             </div>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Sport</th>
-                                                            <th>Status</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Men's Soccer</td>
-                                                            <td>Active</td>
-                                                            <td><button class="btn btn-primary" type="button">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 1rem;">Delete</button></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -529,6 +529,30 @@
                                     <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-3" aria-expanded="false" aria-controls="profile-accordion .item-3">Employment History</button></h2>
                                     <div class="accordion-collapse collapse item-3" role="tabpanel">
                                         <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Employer</th>
+                                                            <th>Position</th>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Active</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Protiviti</td>
+                                                            <td>Technology Consultant</td>
+                                                            <td>06/01/2023</td>
+                                                            <td>-</td>
+                                                            <td>Yes</td>
+                                                            <td class="text-center"><button class="btn btn-primary" type="button" style="margin-right: 4px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 4px;">Delete</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col">
@@ -557,30 +581,6 @@
                                                     <div class="col-auto m-auto text-center" style="padding: 0;"><button class="btn btn-primary" id="EmploymentAddNew" type="button">Add New</button></div>
                                                 </div>
                                             </div>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Employer</th>
-                                                            <th>Position</th>
-                                                            <th>Start Date</th>
-                                                            <th>End Date</th>
-                                                            <th>Active</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Protiviti</td>
-                                                            <td>Technology Consultant</td>
-                                                            <td>06/01/2023</td>
-                                                            <td>-</td>
-                                                            <td>Yes</td>
-                                                            <td class="text-center"><button class="btn btn-primary" type="button" style="margin-right: 4px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 4px;">Delete</button></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -588,30 +588,6 @@
                                     <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-4" aria-expanded="false" aria-controls="profile-accordion .item-4">Engagement Survey</button></h2>
                                     <div class="accordion-collapse collapse item-4" role="tabpanel">
                                         <div class="accordion-body">
-                                            <div class="container">
-                                                <div id="EditSurveyResponse" class="newrecord" style="padding: 2px;border-radius: 2px;border-width: 2px;border-style: solid;">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h5>Edit Survey Response</h5>
-                                                        </div>
-                                                    </div>
-                                                    <form>
-                                                        <div class="row">
-                                                            <div class="col-auto">
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ParticipateNetworkingEvent" name="ParticipateNetworkingEvent" checked=""><label class="form-check-label" for="ParticipateNetworkingEvent">Participate in Resnick Career Networking Events</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PartakePanelist" name="PartakePanelist" checked=""><label class="form-check-label" for="PartakePanelist">Panelist for Industry Career Panel</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="CareerMentorship" name="CareerMentorship" checked=""><label class="form-check-label" for="CareerMentorship">Career Mentorship with Current Student Athletes</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="GuestSpeaker" name="GuestSpeaker" checked=""><label class="form-check-label" for="GuestSpeaker">Guest Speaker for Workshops</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ConnectFormerTeam" name="ConnectFormerTeam" checked=""><label class="form-check-label" for="ConnectFormerTeam">Connect with Current Students on Former Team</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="HostInformationSession" name="HostInformationSession" checked=""><label class="form-check-label" for="HostInformationSession">Host Information Session on Company</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PostEmployment" name="PostEmployment" checked=""><label class="form-check-label" for="PostEmployment">Post Internship/Employment Opportunities</label></div>
-                                                            </div>
-                                                            <div class="col"><label class="form-label" for="SurveyOther">Other:</label><textarea class="form-control form-control-lg" id="SurveyOther" name="SurveyOther"></textarea></div>
-                                                            <div class="col-auto m-auto"><button class="btn btn-primary" id="EditSurveySave" type="submit" style="margin-right: 4px;">Save</button><button class="btn btn-primary" id="EditSurveyCancel" type="button" style="margin-left: 4px;margin-right: 4px;">Cancel</button></div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <thead>
@@ -642,6 +618,30 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <div class="container">
+                                                <div id="EditSurveyResponse" class="newrecord" style="padding: 2px;border-radius: 2px;border-width: 2px;border-style: solid;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h5>Edit Survey Response</h5>
+                                                        </div>
+                                                    </div>
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ParticipateNetworkingEvent" name="ParticipateNetworkingEvent" checked=""><label class="form-check-label" for="ParticipateNetworkingEvent">Participate in Resnick Career Networking Events</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PartakePanelist" name="PartakePanelist" checked=""><label class="form-check-label" for="PartakePanelist">Panelist for Industry Career Panel</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="CareerMentorship" name="CareerMentorship" checked=""><label class="form-check-label" for="CareerMentorship">Career Mentorship with Current Student Athletes</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="GuestSpeaker" name="GuestSpeaker" checked=""><label class="form-check-label" for="GuestSpeaker">Guest Speaker for Workshops</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ConnectFormerTeam" name="ConnectFormerTeam" checked=""><label class="form-check-label" for="ConnectFormerTeam">Connect with Current Students on Former Team</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="HostInformationSession" name="HostInformationSession" checked=""><label class="form-check-label" for="HostInformationSession">Host Information Session on Company</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PostEmployment" name="PostEmployment" checked=""><label class="form-check-label" for="PostEmployment">Post Internship/Employment Opportunities</label></div>
+                                                            </div>
+                                                            <div class="col"><label class="form-label" for="SurveyOther">Other:</label><textarea class="form-control form-control-lg" id="SurveyOther" name="SurveyOther"></textarea></div>
+                                                            <div class="col-auto m-auto"><button class="btn btn-primary" id="EditSurveySave" type="submit" style="margin-right: 4px;">Save</button><button class="btn btn-primary" id="EditSurveyCancel" type="button" style="margin-left: 4px;margin-right: 4px;">Cancel</button></div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -649,7 +649,16 @@
                                     <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-5" aria-expanded="false" aria-controls="profile-accordion .item-5">Notes</button></h2>
                                     <div class="accordion-collapse collapse item-5" role="tabpanel">
                                         <div class="accordion-body">
-                                            <div class="container">
+                                            <div class="vstack">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">11/01/2022 10:32 AM</h4>
+                                                        <h6 class="text-muted card-subtitle mb-2">Last Edited: 11/02/2022 1:37 PM by Alyssa Drachslin</h6>
+                                                        <p class="card-text">Contacted Alumni on 11/1 about attending upcoming speaking event. Left voicemail.<br>Received response on 11/2, will be attending event</p><button class="btn btn-primary" type="button" style="margin-right: 8px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 8px;">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container" style="margin-top: 1rem;">
                                                 <div class="row">
                                                     <div class="col">
                                                         <div id="NewNote" class="newrecord" style="padding: 2px;border-radius: 2px;border-width: 2px;border-style: solid;">
@@ -668,15 +677,6 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-auto m-auto text-center" style="padding: 0;"><button class="btn btn-primary" id="NotesAddNew" type="button">Add New</button></div>
-                                                </div>
-                                            </div>
-                                            <div class="vstack" style="margin-top: 16px;">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">11/01/2022 10:32 AM</h4>
-                                                        <h6 class="text-muted card-subtitle mb-2">Last Edited: 11/02/2022 1:37 PM by Alyssa Drachslin</h6>
-                                                        <p class="card-text">Contacted Alumni on 11/1 about attending upcoming speaking event. Left voicemail.<br>Received response on 11/2, will be attending event</p><button class="btn btn-primary" type="button" style="margin-right: 8px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 8px;">Delete</button>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
