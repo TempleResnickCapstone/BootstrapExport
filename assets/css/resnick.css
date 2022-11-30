@@ -108,11 +108,11 @@
 
 .sidebar {
   width: 6.5rem;
-  min-height: 92vh !important;
+  min-height: 94vh !important;
 }
 
 .topbar {
-  height: 8vh;
+  height: 6vh;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
@@ -135,5 +135,9 @@
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: var(--bs-nav-pills-link-active-color);
   background-color: var(--bs-primary);
+}
+
+.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
 }
 

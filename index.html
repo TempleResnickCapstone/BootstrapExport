@@ -14,7 +14,7 @@
 <body id="page-top">
     <nav class="navbar navbar-light navbar-expand bg-white shadow topbar static-top">
         <div class="container-fluid">
-            <div class="d-flex topbar"><img style="border-style: none;" src="assets/img/icons/Temple_T_logo.svg"><span class="d-inline-flex align-items-center h1 align-middle" style="height: 100%;margin-left: 16px;"><span style="color: rgb(248, 249, 252);">Resnick Center Alumni Tracking System</span><br><br></span></div><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+            <div class="d-flex topbar"><img style="border-style: none;" src="assets/img/icons/Temple_T_logo.svg"><span class="d-inline-flex align-items-center align-middle text-responsive" style="margin-left: 1rem;"><span style="color: rgb(248, 249, 252);">Resnick Center Alumni Tracking System</span><br><br></span></div><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
             <ul class="navbar-nav flex-nowrap ms-auto">
                 <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
                     <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
@@ -28,7 +28,7 @@
                 <div class="d-none d-sm-block topbar-divider"></div>
                 <li class="nav-item dropdown no-arrow">
                     <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="fs-5 text-light d-none d-lg-inline me-2 small" id="user-name">Alyssa Drachslin</span><img class="border rounded-circle img-profile" id="user-icon" src="assets/img/avatars/avatar5.jpeg"></a>
-                        <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                        <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a></div>
                     </div>
                 </li>
             </ul>
@@ -57,29 +57,10 @@
                         <div class="card-body">
                             <div class="row justify-content-between">
                                 <div class="col-auto">
-                                    <div><label class="form-label d-block">Table Columns</label><select>
-                                            <option value="12" selected="">Default</option>
-                                            <option value="">TUID</option>
-                                            <option value="13">First Name</option>
-                                            <option value="14">Last Name</option>
-                                            <option value="">Sport(s)</option>
-                                            <option value="">Grad Year</option>
-                                            <option value="">Grad Term</option>
-                                            <option value="">Industry</option>
-                                            <option value="">LinkedIn URL</option>
-                                            <option value="">LinkedIn Status</option>
-                                            <option value="">Res. City</option>
-                                            <option value="">Res. State</option>
-                                        </select></div>
-                                </div>
-                                <div class="col-auto col-xxl-1 mt-auto"><button class="btn btn-primary" type="button">Export</button></div>
-                            </div>
-                            <div class="row">
-                                <div class="col mt-auto">
                                     <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filterCollapse" href="#filterCollapse" role="button" style="margin-top: 1rem;margin-bottom: 0.5rem;">Filters<i class="fas fa-filter" style="margin-left: 4px;"></i></a>
                                         <div class="collapse" id="filterCollapse">
                                             <form class="filterBoxes">
-                                                <div class="row">
+                                                <div class="row" style="margin-bottom: 1rem;">
                                                     <div class="col-auto mt-auto">
                                                         <div class="form-group"><label class="form-label" for="FirstNameFilter">First Name</label><input class="form-control" type="text" id="FirstNameFilter" name="FirstNameFilter"></div>
                                                     </div>
@@ -89,14 +70,18 @@
                                                     <div class="col-auto mt-auto">
                                                         <div class="form-group"><label class="form-label" for="LastNameFilter">Sport(s)</label><select class="form-select">
                                                                 <option value="">Select...</option>
-                                                                <optgroup label="Volleyball">
-                                                                    <option value="12">Men's Volleyball</option>
-                                                                    <option value="13">Women's Volleyball</option>
-                                                                </optgroup>
-                                                                <optgroup label="Soccer">
-                                                                    <option value="">Men's Soccer</option>
-                                                                    <option value="">Women's Soccer</option>
-                                                                </optgroup>
+                                                                <option value="12">Men's Volleyball</option>
+                                                                <option value="13">Women's Volleyball</option>
+                                                                <option value="">Men's Soccer</option>
+                                                                <option value="">Women's Soccer</option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="col-2 mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="">Sport Status</label><select class="form-select" name="">
+                                                                <option value="-1" selected="">Select...</option>
+                                                                <option value="AC">Active</option>
+                                                                <option value="IA">Inactive</option>
+                                                                <option value="VZ">VZ</option>
                                                             </select></div>
                                                     </div>
                                                     <div class="col-auto mt-auto">
@@ -135,6 +120,15 @@
                                                                 <option value="14">No Account</option>
                                                             </select></div>
                                                     </div>
+                                                    <div class="col-2 mt-auto">
+                                                        <div class="form-group"><label class="form-label" for="">Engagement Status</label><select class="form-select" name="">
+                                                                <option value="-1" selected="">Select...</option>
+                                                                <option value="3">High</option>
+                                                                <option value="2">Low</option>
+                                                                <option value="1">Inactive</option>
+                                                                <option value="0">N/A</option>
+                                                            </select></div>
+                                                    </div>
                                                     <div class="col-auto mt-auto">
                                                         <div class="form-group"><label class="form-label" for="LastNameFilter">Residing State</label><select class="form-select">
                                                                 <option value="" selected="">Select...</option>
@@ -161,12 +155,14 @@
                                                     <div class="col-auto mt-auto">
                                                         <div class="form-group"><label class="form-label" for="LastNameFilter">Employer</label><input class="form-control" type="text" id="LastNameFilter-10" name="LastNameFilter"></div>
                                                     </div>
+                                                    <div class="col-auto mt-auto"><button class="btn btn-primary" type="button">Apply</button></div>
                                                     <div class="col-auto mt-auto"><button class="btn btn-primary" type="button">Clear</button></div>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-auto my-auto"><button class="btn btn-primary" type="button">Export</button></div>
                             </div>
                             <div class="table-responsive table mt-2" id="alumniDataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
@@ -330,7 +326,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <div class="form-group"><label class="form-label" for="TempleEmail">Temple Email</label><input class="form-control" type="email" id="TempleEmail" disabled="" name="TempleEmail"></div>
+                                        <div class="form-group"><label class="form-label" for="TempleEmail">Temple Email</label><input class="form-control" type="email" id="TempleEmail" name="TempleEmail"></div>
                                     </div>
                                     <div class="col">
                                         <div class="form-group"><label class="form-label" for="AlternateEmail">Alternate Email</label><input class="form-control" type="email" id="AlternateEmail" name="AlternateEmail"></div>
@@ -362,18 +358,27 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-2">
+                                    <div class="col-2 mt-auto">
                                         <div class="form-group"><label class="form-label" for="SemestersCompleted">Semesters Completed at Temple</label><input class="form-control" type="number" id="SemestersCompleted" value="8" name="SemestersCompleted"></div>
                                     </div>
                                     <div class="col mt-auto">
                                         <div class="form-group"><label class="form-label" for="LinkedInURL">LinkedIn Profile URL</label><input class="form-control" type="url" id="LinkedInURL" name="LinkedInURL"></div>
                                     </div>
-                                    <div class="col-2">
+                                    <div class="col-2 mt-auto">
                                         <div class="form-group"><label class="form-label" for="LinkedInStatus">LinkedIn Activity Status</label><select class="form-select" id="LinkedInStatus" name="LinkedInStatus">
                                                 <option value="-1" selected="">Select</option>
                                                 <option value="1">Inactive</option>
                                                 <option value="2">Active</option>
                                                 <option value="-2">Add Status</option>
+                                            </select></div>
+                                    </div>
+                                    <div class="col-2 mt-auto">
+                                        <div class="form-group"><label class="form-label" for="EngagementStatus">Engagement Status</label><select class="form-select" id="EngagementStatus" name="EngagementStatus">
+                                                <option value="-1" selected="">Select</option>
+                                                <option value="3">High</option>
+                                                <option value="2">Low</option>
+                                                <option value="1">Inactive</option>
+                                                <option value="0">N/A</option>
                                             </select></div>
                                     </div>
                                 </div>
@@ -421,7 +426,7 @@
                                                                         </select></div>
                                                                 </div>
                                                                 <div class="row">
-                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewEducationCollege">School / College</label><select class="form-select" id="NewEducationCollege" style="display: block;" name="NewEducationCollege">
+                                                                    <div class="col"><label class="form-label" style="display: block;" for="NewEducationCollege">College / School</label><select class="form-select" id="NewEducationCollege" style="display: block;" name="NewEducationCollege">
                                                                             <option value="CST" selected="">College of Science and Technology</option>
                                                                             <option value="SPH">School of Public Health</option>
                                                                             <option value="-2">Add New School / College</option>
@@ -447,7 +452,7 @@
                                                             <th>Degree Type</th>
                                                             <th>Major</th>
                                                             <th>Institution</th>
-                                                            <th>School / College</th>
+                                                            <th>College / School</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
@@ -467,7 +472,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-2" aria-expanded="false" aria-controls="profile-accordion .item-2">Sports</button></h2>
+                                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-2" aria-expanded="false" aria-controls="profile-accordion .item-2">Sport</button></h2>
                                     <div class="accordion-collapse collapse item-2" role="tabpanel">
                                         <div class="accordion-body">
                                             <div class="container">
@@ -481,9 +486,15 @@
                                                             </div>
                                                             <form>
                                                                 <div class="row">
-                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewEducationCollege">Sport</label><select class="form-select" id="NewSport" style="display: block;" name="NewSport">
-                                                                            <option value="MVB" selected="">Men's Volleyball</option>
+                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewSport">Sport</label><select class="form-select" id="NewSport" style="display: block;" name="NewSport">
+                                                                            <option value="-1" selected="">Select...</option>
+                                                                            <option value="MVB">Men's Volleyball</option>
                                                                             <option value="MSC">Men's Soccer</option>
+                                                                        </select></div>
+                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewSportStatus">Status</label><select class="form-select" id="NewSportStatus" style="display: block;" name="NewSportStatus">
+                                                                            <option value="AC" selected="">Active</option>
+                                                                            <option value="IA">Inactive</option>
+                                                                            <option value="VZ">VZ</option>
                                                                         </select></div>
                                                                     <div class="col-auto m-auto text-center"><button class="btn btn-primary" id="NewSportsSave" type="submit" style="margin-right: 4px;">Save</button><button class="btn btn-primary" id="NewSportsCancel" type="button" style="margin-left: 4px;">Cancel</button></div>
                                                                 </div>
@@ -498,13 +509,15 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Sport</th>
+                                                            <th>Status</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>Men's Soccer</td>
-                                                            <td><button class="btn btn-primary" type="button">Delete</button></td>
+                                                            <td>Active</td>
+                                                            <td><button class="btn btn-primary" type="button">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 1rem;">Delete</button></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -528,10 +541,10 @@
                                                             <form>
                                                                 <div class="row">
                                                                     <div class="col"><label class="form-label required" style="display: block;" for="NewEmploymentEmployer">Employer</label><input class="form-control" type="text" id="NewEmploymentEmployer" name="NewEmploymentEmployer"></div>
-                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewEmploymentPosition">Position</label><input class="form-control" type="text" id="NewEmploymentPosition" name="NewEmploymentPosition"></div>
+                                                                    <div class="col"><label class="form-label" style="display: block;" for="NewEmploymentPosition">Position</label><input class="form-control" type="text" id="NewEmploymentPosition" name="NewEmploymentPosition"></div>
                                                                 </div>
                                                                 <div class="row">
-                                                                    <div class="col"><label class="form-label required" style="display: block;" for="NewEmploymentStartDate">Start Date</label><input class="form-control" id="NewEmploymentStartDate" type="date" name="NewEmploymentStartDate"></div>
+                                                                    <div class="col"><label class="form-label" style="display: block;" for="NewEmploymentStartDate">Start Date</label><input class="form-control" id="NewEmploymentStartDate" type="date" name="NewEmploymentStartDate"></div>
                                                                     <div class="col"><label class="form-label" style="display: block;" for="NewEmploymentEndDate">End Date</label><input class="form-control" id="NewEmploymentEndDate" type="date" name="NewEmploymentEndDate"></div>
                                                                     <div class="col-auto m-auto">
                                                                         <div class="form-check"><input class="form-check-input" type="checkbox" id="NewEmploymentActive" name="NewEmploymentActive"><label class="form-check-label" for="NewEmploymentActive">Active Position?</label></div>
@@ -572,8 +585,69 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-4" aria-expanded="false" aria-controls="profile-accordion .item-4">Notes</button></h2>
+                                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-4" aria-expanded="false" aria-controls="profile-accordion .item-4">Engagement Survey</button></h2>
                                     <div class="accordion-collapse collapse item-4" role="tabpanel">
+                                        <div class="accordion-body">
+                                            <div class="container">
+                                                <div id="EditSurveyResponse" class="newrecord" style="padding: 2px;border-radius: 2px;border-width: 2px;border-style: solid;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h5>Edit Survey Response</h5>
+                                                        </div>
+                                                    </div>
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ParticipateNetworkingEvent" name="ParticipateNetworkingEvent" checked=""><label class="form-check-label" for="ParticipateNetworkingEvent">Participate in Resnick Career Networking Events</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PartakePanelist" name="PartakePanelist" checked=""><label class="form-check-label" for="PartakePanelist">Panelist for Industry Career Panel</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="CareerMentorship" name="CareerMentorship" checked=""><label class="form-check-label" for="CareerMentorship">Career Mentorship with Current Student Athletes</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="GuestSpeaker" name="GuestSpeaker" checked=""><label class="form-check-label" for="GuestSpeaker">Guest Speaker for Workshops</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="ConnectFormerTeam" name="ConnectFormerTeam" checked=""><label class="form-check-label" for="ConnectFormerTeam">Connect with Current Students on Former Team</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="HostInformationSession" name="HostInformationSession" checked=""><label class="form-check-label" for="HostInformationSession">Host Information Session on Company</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="PostEmployment" name="PostEmployment" checked=""><label class="form-check-label" for="PostEmployment">Post Internship/Employment Opportunities</label></div>
+                                                            </div>
+                                                            <div class="col"><label class="form-label" for="SurveyOther">Other:</label><textarea class="form-control form-control-lg" id="SurveyOther" name="SurveyOther"></textarea></div>
+                                                            <div class="col-auto m-auto"><button class="btn btn-primary" id="EditSurveySave" type="submit" style="margin-right: 4px;">Save</button><button class="btn btn-primary" id="EditSurveyCancel" type="button" style="margin-left: 4px;margin-right: 4px;">Cancel</button></div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Date</th>
+                                                            <th>Participate</th>
+                                                            <th>Panelist</th>
+                                                            <th>Mentorship</th>
+                                                            <th>Speaker</th>
+                                                            <th>Connect</th>
+                                                            <th>Host</th>
+                                                            <th>Post</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>11/28/2022</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td>Y</td>
+                                                            <td class="text-center"><button class="btn btn-primary" id="tempSurveyEditButton" type="button" style="margin-right: 4px;">Edit</button><button class="btn btn-primary" type="button" style="margin-left: 4px;">Delete</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profile-accordion .item-5" aria-expanded="false" aria-controls="profile-accordion .item-5">Notes</button></h2>
+                                    <div class="accordion-collapse collapse item-5" role="tabpanel">
                                         <div class="accordion-body">
                                             <div class="container">
                                                 <div class="row">
