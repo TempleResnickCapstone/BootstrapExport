@@ -141,7 +141,7 @@
   font-size: calc(100% + 1vw + 1vh);
 }
 
-#profile-modal .form-label {
+#profile-modal .form-label, #createForm .form-label {
   font-weight: bold;
   margin-top: 0.5rem;
 }
